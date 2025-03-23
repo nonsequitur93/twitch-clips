@@ -11,18 +11,40 @@
       overflow: hidden;
       background-color: #0d0d0d;
     }
-    iframe {
+
+    .glow-container {
       width: 100vw;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d0d0d;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 90vh;
       border: none;
+      border-radius: 16px;
+      box-shadow: 0 0 35px rgba(175, 122, 255, 0.8),
+                  0 0 15px rgba(80, 0, 120, 0.6) inset;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 15px rgba(175, 122, 255, 0.6); }
+      50% { box-shadow: 0 0 35px rgba(200, 150, 255, 1); }
+      100% { box-shadow: 0 0 15px rgba(175, 122, 255, 0.6); }
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="https://twitch.so/rcp/rcp.php?channel=nonsequitur93&vol=1&dur=60&mdur=0&peroid=all&extra=none&chanicon=false&game=true&showfollow=false&showdetail=true&timer=false&bstyle=solid&bsize=2&bcolor=e6daff&font=Maven Pro&fcolor=ffffff&ocolor=000000&scan=false&static=false&fullscreen=false&creators=&exclude=" 
-    allow="autoplay; fullscreen"
-    allowfullscreen>
-  </iframe>
+  <div class="glow-container">
+    <iframe 
+      src="https://twitch.so/rcp/rcp.php?channel=nonsequitur93&vol=1&dur=60&mdur=0&peroid=all&extra=none&chanicon=false&game=true&showfollow=false&showdetail=true&timer=false&bstyle=solid&bsize=2&bcolor=e6daff&font=Maven Pro&fcolor=ffffff&ocolor=000000&scan=false&static=false&fullscreen=false&creators=&exclude=" 
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
