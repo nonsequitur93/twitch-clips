@@ -8,7 +8,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      height: 100%;
       background-color: #0d0d0d;
     }
 
@@ -19,22 +19,23 @@
       justify-content: center;
       align-items: center;
       background-color: #0d0d0d;
-    }
-
-    iframe {
-      width: 90vw;
-      height: 90vh;
-      border: none;
-      border-radius: 16px;
+      border-radius: 0;
       box-shadow: 0 0 35px rgba(175, 122, 255, 0.8),
-                  0 0 15px rgba(80, 0, 120, 0.6) inset;
+                  0 0 25px rgba(80, 0, 120, 0.6) inset;
       animation: glowPulse 3s ease-in-out infinite;
     }
 
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+    }
+
     @keyframes glowPulse {
-      0% { box-shadow: 0 0 15px rgba(175, 122, 255, 0.6); }
-      50% { box-shadow: 0 0 35px rgba(200, 150, 255, 1); }
-      100% { box-shadow: 0 0 15px rgba(175, 122, 255, 0.6); }
+      0% { box-shadow: 0 0 20px rgba(175, 122, 255, 0.5); }
+      50% { box-shadow: 0 0 50px rgba(200, 150, 255, 1); }
+      100% { box-shadow: 0 0 20px rgba(175, 122, 255, 0.5); }
     }
   </style>
 </head>
